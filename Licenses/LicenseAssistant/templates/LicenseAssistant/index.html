@@ -1,0 +1,101 @@
+{% extends "LicenseAssistant/layout.html" %}
+{% load static %}
+{% block title %}
+Homepage
+{% endblock %}
+{% block style %}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+{% endblock %}
+
+{% block body %}
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Entreperneur Approvals Assistant Application</h1>
+  <p class="w3-xlarge">Business Made Easy</p>
+  <a href="{% url 'license' %}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</a>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Unlock Your Entrepreneurial Journey: Simplified Licenses & Approvals.</h1>
+
+      <p class="w3-text-grey">Stop navigating the maze of Indian regulations. Our single-window platform streamlines the entire process of obtaining the licenses and approvals you need to launch and grow your business. From initial registration to industry-specific permits, we're your trusted partner in navigating the complexities, saving you time, and letting you focus on what truly matters – building your vision..</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src = {% static "LicenseAssistant/logo.png" %} class="fa fa-anchor w3-padding-64 w3-text-red" width = 300px>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <img src = "{% static "LicenseAssistant/india.webp" %}" class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right">
+    </div>
+
+    <div class="w3-twothird">
+      <h1> Steps for acquiring licenses and approvals for business</h1>
+      <h5 class="w3-padding-32">The process of acquiring licenses and approvals for a business in India involves several steps that can vary based on the nature, scale, and location of your business. Here's a general outline:</h5>
+
+      <p class="w3-text-grey">
+        <strong>Phase 1: Planning and Preparation</strong><br/>
+        <strong>Determine Your Business Structure:</strong> Decide on the legal structure of your business (Sole Proprietorship, Partnership, LLP, Private Limited Company, etc.). This will influence registration and some licensing requirements.<br/>
+        <strong>Identify Your Business Activity:</strong> Clearly define what your business will do, as different industries have specific licensing needs (e.g., food, manufacturing, trading).<br/>
+        <strong>Determine the Scale of Operation:</strong> The size of your business and expected turnover can affect the type of licenses needed.<br/>
+        <strong>Choose a Location:</strong> Business regulations and licensing authorities often vary at the state and local levels.<br/>
+        <strong>Market Research and Business Plan:</strong> Conduct thorough market research and create a detailed business plan, which will help identify potential regulatory hurdles.<br/>
+         <strong>Phase 2: Registration and Basic Requirements</strong><br/>
+        <strong>Company/Firm Registration:</strong><br/>
+        Register your business with the Ministry of Corporate Affairs (MCA) for companies and LLPs.
+        Register your partnership firm under the Indian Partnership Act, 1932 (optional but recommended).
+        Sole proprietorships may not require central registration but need other registrations based on the business.<br/>
+        <strong>Obtain PAN (Permanent Account Number):</strong> Mandatory for all businesses for tax purposes.<br/>
+        <strong>Obtain TAN (Tax Deduction and Collection Account Number):</strong> Required if your business needs to deduct or collect tax at source.<br/>
+        <strong>GST Registration (Goods and Services Tax):</strong> If your turnover exceeds the threshold or if you are involved in inter-state supply.</br>
+        <strong>Udyam Registration (for MSMEs):</strong> Register your micro, small, or medium enterprise to avail government schemes.<br/>
+        <strong>Open a Bank Account:</strong> A business bank account is essential.<br/>
+        <strong>Phase 3: Identifying Specific Licenses and Approvals</strong><br/>
+         <strong>Phase 4:Applying for all the required Licenses:</strong><br/>
+         By following these steps, you can navigate the process of acquiring the necessary licenses and approvals to start and operate your business legally in India.</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+{% endblock %}
+

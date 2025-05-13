@@ -1,0 +1,30 @@
+{% extends "LicenseAssistant/layout.html" %}
+
+{% block title %}Results{% endblock %}
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block body %}
+<div class="w3-container w3-padding-64 w3-center">
+    <h2>Approvals Needed for:</h2>
+    <p><strong>{{ structure }}</strong> - {{ activity }} in {{ location }}</p>
+
+    <ul class="w3-ul w3-card-4" style="max-width: 600px; margin: auto;">
+      {% for license in licenses %}
+      {% if license.slug %}
+        <li class="w3-padding-large"><a href="{% url 'license_detail' license.slug %}">{{ license }}</a>></li>
+      {% else %}
+        <li class="w3-padding-large">{{ license }} </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  {% if ai_suggestions %}
+    <h3>AI Suggested Licenses:</h3>
+    <p>{{ ai_suggestions }}</p>
+   {% endif %}
+  <br>
+  <a href="{% url 'license' %}" class="w3-button w3-blue w3-margin-top">Search Again</a>
+</div>
+{% endblock %}

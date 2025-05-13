@@ -3,15 +3,19 @@
 {% block title %}
 Homepage
 {% endblock %}
-{% block style %}
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+</style>
 {% endblock %}
 
 {% block body %}
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<header class="w3-container w3-red w3-center" style="padding:128px 16px;;">
   <h1 class="w3-margin w3-jumbo">Entreperneur Approvals Assistant Application</h1>
   <p class="w3-xlarge">Business Made Easy</p>
   <a href="{% url 'license' %}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</a>
@@ -27,7 +31,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-third w3-center">
-      <img src = {% static "LicenseAssistant/logo.png" %} class="fa fa-anchor w3-padding-64 w3-text-red" width = 300px>
+      <img src = "{% static 'LicenseAssistant/logo.png' %}" class="fa fa-anchor w3-padding-64 w3-text-red" width = 300px>
     </div>
   </div>
 </div>

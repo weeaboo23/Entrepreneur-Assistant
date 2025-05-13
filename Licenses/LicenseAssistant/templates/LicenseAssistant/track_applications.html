@@ -1,0 +1,35 @@
+{% extends "LicenseAssistant/layout.html" %}
+
+{% block title %}
+Tracking Page 
+{% endblock %}
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block body %}
+  <h2>Your Applications</h2>
+  {% if applications %}
+    <table>
+      <thead>
+        <tr>
+          <th>Approval Name</th>
+          <th>Status</th>
+          <th>Applied At</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for application in applications %}
+          <tr>
+            <td>{{ application.approval.name }}</td>
+            <td>{{ application.status }}</td>
+            <td>{{ application.applied_at }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>You have no applications.</p>
+  {% endif %}
+{% endblock %}

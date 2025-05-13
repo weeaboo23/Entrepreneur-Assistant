@@ -1,0 +1,32 @@
+{% extends "LicenseAssistant/layout.html" %}
+
+
+{% block title %}
+License Details 
+{% endblock %}
+
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block body %}
+<div style="display: flex; align-items: center; justify-content: center; height: 80vh;">
+    <div style="text-align: left; background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); min-width: 400px;">
+  
+      <h2 style="text-align: center; margin-bottom: 20px;">License Details</h2>
+  
+      <p><strong>License Name:</strong> {{ info.approval }}</p>
+      <p><strong>Description:</strong> {{ info.description }}</p>
+      <p><strong>Department:</strong> {{ info.department }}</p>
+      <p><strong>Required Documents:</strong></p>
+      <ul>
+        {% for doc in info.documents %}
+          <li>{{ doc }}</li>
+        {% endfor %}
+      </ul>
+      <p><strong>Website:</strong> <a href="https://www.google.com/search?q={{ info.approval }}/{{ info.department }}/{{ location }} application site&btnI=I" target="_blank">Know More/Apply</a></p>
+  
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "LicenseAssistant/layout.html" %}
+
+{% block title %}
+COntact Me 
+{% endblock %}
+{% block head %}
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block body %}
+  <h2>Contact Us</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send Message</button>
+  </form>
+{% endblock %}
